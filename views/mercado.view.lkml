@@ -1,7 +1,7 @@
 view: mercado {
   sql_table_name: `coe-academy-gcp.looker_academy.Mercado` ;;
 
-  dimension: ciudad {
+  dimension: cidade {
     type: string
     sql: ${TABLE}.Ciudad ;;
   }
@@ -21,7 +21,7 @@ view: mercado {
     type: string
     sql: ${TABLE}.Pais ;;
   }
-  dimension: region {
+  dimension: regiao {
     type: string
     sql: ${TABLE}.Region ;;
   }

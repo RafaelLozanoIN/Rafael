@@ -1,7 +1,7 @@
 view: vendedores {
   sql_table_name: `coe-academy-gcp.looker_academy.Vendedores` ;;
 
-  dimension: region {
+  dimension: regiao {
     type: string
     sql: ${TABLE}.Region ;;
   }

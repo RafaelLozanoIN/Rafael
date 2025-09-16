@@ -1,7 +1,7 @@
 view: devoluciones {
   sql_table_name: `coe-academy-gcp.looker_academy.Devoluciones` ;;
 
-  dimension: devuelto {
+  dimension: devolucao {
     type: string
     sql: ${TABLE}.Devuelto ;;
   }
@@ -9,7 +9,7 @@ view: devoluciones {
     type: string
     sql: ${TABLE}.ID_pedido ;;
   }
-  dimension: region {
+  dimension: regiao {
     type: string
     sql: ${TABLE}.Region ;;
   }

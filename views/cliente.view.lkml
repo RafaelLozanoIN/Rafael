@@ -5,7 +5,7 @@ view: cliente {
     type: string
     sql: ${TABLE}.ID_cliente ;;
   }
-  dimension: nombre_cliente {
+  dimension: nome_cliente {
     type: string
     sql: ${TABLE}.Nombre_cliente ;;
   }

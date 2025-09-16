@@ -9,7 +9,7 @@ view: producto {
     type: string
     sql: ${TABLE}.ID_producto ;;
   }
-  dimension: nombre_producto {
+  dimension: nome_produto {
     type: string
     sql: ${TABLE}.Nombre_producto ;;
   }

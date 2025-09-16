@@ -5,16 +5,17 @@ view: pedidos {
     type: number
     sql: ${TABLE}.Beneficio ;;
   }
-  dimension: cantidad {
+  dimension: quantidade {
     type: number
     hidden: yes
     sql: ${TABLE}.Cantidad ;;
   }
-  dimension: costo_envio {
+  dimension: custo_envio {
     type: number
+    hidden: yes
     sql: ${TABLE}.Costo_envio ;;
   }
-  dimension: descuento {
+  dimension: desconto {
     type: number
     sql: ${TABLE}.Descuento ;;
   }
@@ -25,7 +26,7 @@ view: pedidos {
     datatype: date
     sql: ${TABLE}.Fecha_envio ;;
   }
-  dimension_group: fecha_pedido {
+  dimension_group: data_pedido {
     type: time
     timeframes: [raw, date, week, month, quarter, year]
     convert_tz: no
@@ -56,21 +57,32 @@ view: pedidos {
     type: string
     sql: ${TABLE}.Modo_envio ;;
   }
-  dimension: prioridad_pedido {
+  dimension: prioridade_pedido {
     type: string
     sql: ${TABLE}.Prioridad_pedido ;;
   }
-  dimension: ventas {
+  dimension: vendas {
     type: number
+    hidden: yes
     sql: ${TABLE}.Ventas ;;
   }
   measure: count {
     type: count
   }
 
-  measure: quantidade{
+  measure: Quantidade{
    type: sum
    label: "Quantidade"
-   sql:  ${cantidad};;
+   sql:  ${quantidade};;
+  }
+  measure: CustoEnvio{
+    type: sum
+    label: "CustoEnvio"
+    sql:  ${custo_envio};;
+  }
+  measure: Vendas{
+    type: sum
+    label: "Vendas"
+    sql:  ${vendas};;
   }
 }
